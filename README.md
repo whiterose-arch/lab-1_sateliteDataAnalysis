@@ -45,7 +45,22 @@ Contains shell scripts used to automate the analysis workflow.
 
 ## Team Members
 
-| Team Member | Contribution |
+|## Team Contributions
+
+- Eric Mugisha: Extracted Burundi records from
+  "raw_data/satelite_temperature_data.csv", sorted them by humidity in descending
+  order, and saved the result as
+  "analyzed_data/humidity_data_burundi.csv".
+
+- Margaret Gitau: chore(cleanup): remove dummy, dummy-2 and dummy-3.txt files
+
+- Emmanuel Adekojo: Merge pull requests 
+- Jemima Muthoka: chore(cleanup): rename rename_directory to analyzed_data
+
+
+
+
+`
 |------------|---------------|
 
 ---
