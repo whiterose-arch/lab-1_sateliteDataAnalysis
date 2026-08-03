@@ -1,26 +1,54 @@
-# Guidelines
+#1.PROJECT TITLE:
+ Satellite Data Analysis with Linux
 
-## Before You Start
+#2.PROJECT OVERVIEW:
+This project was completed as part of the Bachelor of Software Engineer(BSE) Linux module at ALCHE.This project involved collaborating on Github repository containing satellite weather data provided by an AI startup in Mauritius. The objective was to organize the repository, clean unnecessary files, and use Linux command-line tools to extract meaningful insights from the dataset.
 
-Follow these steps to prepare for your work:
+#3.PROJECT OBJECTIVES:
 
-1. **Fork the Repository**  
-   Click on the **Fork** button at the top of the repository page. This creates a copy of the repository for your group.
+- Clean and organize the repository
+- Organize raw and analyzed datasets
+- Perform data analysis using Linux commands
+- Document the workflow for future users
+- Collaborate using Git and GitHub
 
-2. **Add Collaborators**  
-   Once the repository is forked:
-   - Go to **Settings** > **Collaborators and teams** > **Add people**.
-   - Invite all group members as collaborators.
+#4.REPOSITORY STRUCTURE
+.
+├── raw_data/
+│   └── satellite_temperature_data.csv
+│
+├── analyzed_data/
+│   ├── highest_temp.csv
+│   └── humidity_data_Kenya.csv
+│
+└── README.md
 
----
+# 5. REPOSITORY CLEANUP:
 
-## Working on the Project
+The following cleanup tasks were completed:
 
-After forking and setting up collaborators, follow these steps:
+- Renamed `rename_directory` to `analyzed_data`
+- Removed unnecessary files:
+  - dummy
+  - dummy-2
+  - dummy-3.txt
+- Moved `satellite_temperature_data.csv` into `raw_data`
 
-1. **Clone the Repository**  
-   Clone your forked repository to your local machine:
-   ```bash
-   git clone https://github.com/your-username/project-name.git
-   ```
+# 6. TEAM MEMBERS  AND CONTRIBUTIONS:
+
+
+| Member          | Contribution                             |
+| --------------- | ---------------------------------------- |
+| Margaret Gitau | Repository cleanup, README documentation |
+| Erick Mugisha  |                     |
+| Jemima Muthoka  |                         |
+| Emmanuel Adekojo |          |
+
+
+# 7. TECHNOLOGIES USED:
+
+- Ubuntu Linux
+- Bash
+- Gi
+- GitHub
 
