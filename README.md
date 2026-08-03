@@ -1,26 +1,59 @@
-# Guidelines
+# Lab 1 Satelite Data Analysis
 
-## Before You Start
+## Overview
 
-Follow these steps to prepare for your work:
-
-1. **Fork the Repository**  
-   Click on the **Fork** button at the top of the repository page. This creates a copy of the repository for your group.
-
-2. **Add Collaborators**  
-   Once the repository is forked:
-   - Go to **Settings** > **Collaborators and teams** > **Add people**.
-   - Invite all group members as collaborators.
+This repository contains the data analysis workflow for the project of satelite Data Analysis. It includes the original datasets, processed outputs, and the scripts/commands used to perform the analysis.
 
 ---
 
-## Working on the Project
+## Repository Structure
 
-After forking and setting up collaborators, follow these steps:
+```text
+.
+├── raw_data/
+│   └ satelite_temperature_data.csv
+├── analyzed_data/
+│   ├ highest_temp.cs
+│   ├ humidity_data_Rwanda.csv
+├── scripts/
+│   └─extract_data.sh 
+├── README.md
+```
 
-1. **Clone the Repository**  
-   Clone your forked repository to your local machine:
-   ```bash
-   git clone https://github.com/your-username/project-name.git
-   ```
+### Directory Description
+
+#### `raw_data/`
+Contains the original datasets provided for the project. These files are not modified.
+
+#### `analyzed_data/`
+Contains the processed datasets,and  filtered result generated during the analysis.
+
+#### `scripts/`
+Contains shell scripts used to automate the analysis workflow.
+
+---
+
+## Task 2 Analysis
+
+### Commands Used
+
+---
+
+## Workflow
+
+---
+
+## Team Members
+
+| Team Member | Contribution |
+|------------|---------------|
+
+---
+
+## Requirements
+
+---
+
+## Notes
+
 
