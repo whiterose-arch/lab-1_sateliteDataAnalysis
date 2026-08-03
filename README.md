@@ -33,8 +33,27 @@ The following cleanup tasks were completed:
   - dummy-2
   - dummy-3.txt
 - Moved `satellite_temperature_data.csv` into `raw_data`
+# 6. LINUX COMMANDS USED 
 
-# 6. TEAM MEMBERS  AND CONTRIBUTIONS:
+| Command | Purpose |
+|---------|---------|
+| `mv` | Renamed the `rename_directory` directory to `analyzed_data` and moved the dataset into `raw_data/`. |
+| `rm` | Removed the unnecessary dummy files (`dummy`, `dummy-2`, and `dummy-3.txt`). |
+| `mkdir` | Created directories such as `raw_data`, `analyzed_data`, and `scripts` (if needed). |
+| `cp` | Copied files where necessary during repository organization or testing. |
+| `cat` | Displayed the contents of the dataset. |
+| `head` | Displayed the first lines of the dataset and extracted the top 10 temperature records after sorting. |
+| `tail` | Skipped the CSV header before sorting the data. |
+| `grep` | Filtered records for a specific country. |
+| `cut` | Extracted specific columns from the CSV file when required. |
+| `sort` | Sorted temperature and humidity values in descending order. |
+| `chmod` | Made the `analyze.sh` script executable. |
+| `nano` | Created and edited the shell script and README file. |
+| `git add` | Staged modified files for commit. |
+| `git commit` | Recorded changes in the repository. |
+| `git push` | Uploaded commits to the GitHub repository. |
+| `git checkout` | Switched to the assigned feature/documentation branches. |
+# 7. TEAM MEMBERS  AND CONTRIBUTIONS:
 
 
 | Member          | Contribution                             |
@@ -45,7 +64,7 @@ The following cleanup tasks were completed:
 | Emmanuel Adekojo |          |
 
 
-# 7. TECHNOLOGIES USED:
+# 8. TECHNOLOGIES USED:
 
 - Ubuntu Linux
 - Bash
