@@ -86,3 +86,75 @@ grep "Rwanda" raw_data/satelite_temperature_data.csv | sort -t ',' -k 4,4nr >> a
 - Original datasets are preserved in `raw_data/`.
 - All generated outputs are stored in `analyzed_data/`.
 - Analysis can be reproduced by running the provided script or following the documented commands.
+
+## ANALYSIS WORKFLOW
+
+The repository includes a Bash script (`scripts/analyze.sh`) that automates the analysis of the satellite temperature dataset. The script generates two output files: one containing the **top 10 highest recorded temperatures** across the dataset and another containing **humidity data for a user-specified country**.
+
+### Prerequisites
+
+Ensure the following project structure exists:
+
+```text
+raw_data/
+└── satelite_temperature_data.csv
+
+scripts/
+└── analyze.sh
+
+analyzed_data/
+```
+
+### Running the Analysis
+
+Execute the script from the root of the repository, providing the country name as an argument:
+
+```bash
+./scripts/analyze.sh <country_name>
+```
+
+Example:
+
+```bash
+./scripts/analyze.sh Kenya
+```
+
+If no country name is provided, the script displays a usage message and exits:
+
+```bash
+Usage: ./scripts/analyze.sh <country_name>
+```
+
+### What the Script Does
+
+1. Validates that a country name has been provided as a command-line argument.
+2. Reads the input dataset located at `raw_data/satelite_temperature_data.csv`.
+3. Creates the `analyzed_data/` directory if it does not already exist.
+4. Generates `highest_temp.csv` containing:
+
+   * the original header row, and
+   * the 10 records with the highest temperatures, sorted in descending order.
+5. Generates `humidity_data_<country>.csv` containing:
+
+   * the original header row, and
+   * all records for the specified country, sorted by humidity in descending order.
+
+### Output Files
+
+After successful execution, the following files are created inside the `analyzed_data/` directory:
+
+* `highest_temp.csv` – Contains the top 10 highest temperature records from the dataset.
+* `humidity_data_<country>.csv` – Contains humidity records for the specified country, sorted from highest to lowest humidity.
+
+### Commands Used
+
+The analysis workflow uses standard Linux command-line utilities:
+
+* `mkdir -p` – Creates the output directory if it does not exist.
+* `touch` – Creates the output CSV files.
+* `head` – Copies the CSV header to the output files.
+* `tail` – Skips the header before processing the dataset.
+* `sort` – Sorts temperature and humidity values in descending order.
+* `grep` – Filters records for the specified country.
+* `head -n 10` – Selects the top 10 highest temperature records.
+
