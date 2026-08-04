@@ -22,11 +22,11 @@ OUTPUT="analyzed_data"
 # Create the output folder if it doesn't exist
 mkdir -p "$OUTPUT"
 
-#make the output file for the highest temperature data
+# make the output file for the highest temperature and humidity data
 touch "$OUTPUT/highest_temp.csv"
-touch "analyzed_data/humidity_data_$COUNTRY.csv"
+touch "$OUTPUT/humidity_data_$COUNTRY.csv"
 
- # Preserve header row in output 
+# Preserve header row in output
 head -n 1 "$INPUT" > "$OUTPUT/highest_temp.csv"
 
 # Extract the top 10 highest temperatures and save to a new CSV file
@@ -34,5 +34,9 @@ head -n 1 "$INPUT" > "$OUTPUT/highest_temp.csv"
 #add the top 10 highest temperatures to the output file
 tail -n +2 "$INPUT" | sort -t ',' -k 3,3nr | head -n 10 >> "$OUTPUT/highest_temp.csv"
 
+# Preserve header row in the country-specific humidity output file
 head -n 1 "$INPUT" >> "$OUTPUT/humidity_data_$COUNTRY.csv"
+
+# Filter rows matching the given country, sort by humidity (4th column) in descending order,
+# and append the results to the country-specific humidity output file
 grep "$COUNTRY" "$INPUT" | sort -t ',' -k 4,4nr >> "$OUTPUT/humidity_data_$COUNTRY.csv"
