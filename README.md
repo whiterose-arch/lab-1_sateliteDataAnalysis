@@ -57,19 +57,7 @@ head -n 1 raw_data/satelite_temperature_data.csv >> analyzed_data/humidity_data_
 grep "Rwanda" raw_data/satelite_temperature_data.csv | sort -t ',' -k 4,4nr >> analyzed_data/humidity_data_Rwanda.csv # extract all its records, and sort the results in descending order of humidity. Save the output as analyzed_data/humidity_data_Rwanda
 ```
 
----
 
-
-## Team Members
-
-| Member name | Contributions |
-| ----------- | ------------- |
-| Eric Mugisha | Extracted Burundi records from `raw_data/satelite_temperature_data.csv`, sorted them by humidity in descending order, and saved the result as `analyzed_data/humidity_data_burundi.csv`. |
-| Margaret Gitau | Removed the `dummy.txt`, `dummy-2.txt`, and `dummy-3.txt` files. |
-| Emmanuel Adekojo | Merged pull requests. |
-| Jemima Muthoka | Renamed `rename_directory` to `analyzed_data`. |
-
----
 
 ## Requirements
 
